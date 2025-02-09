@@ -1,7 +1,95 @@
-body,
-html {
-  /* height:100%; */
+/* Margin Padding Box Sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} 
 
-  margin: 0px;
-  padding: 0px;
+/* Set full height layout */
+html, body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Set section sizes for header main body and footer */
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto; 
+  height: 100vh; 
+  overflow-x: hidden; 
+}
+
+/* Header styling */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #5b5b5b;
+  color: white;
+}
+
+header .store-name h1 {
+  margin-left: 20px;
+}
+
+
+header nav ul li {
+  margin: 0 20px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+/* Main section column sizing */
+main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 20px;
+  padding: 20px;
+  grid-auto-rows: minmax(250px, auto); 
+}
+
+.store-item {
+  background-color: #f4f4f4;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.store-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.store-item p {
+  margin: 10px 0;
+}
+
+.item-info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.item-info span {
+  font-weight: bold;
+  flex: 1;
+  text-align: center;
+}
+
+/* Footer styling */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
 }
